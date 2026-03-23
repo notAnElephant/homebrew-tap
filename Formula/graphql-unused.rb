@@ -23,6 +23,7 @@ class GraphqlUnused < Formula
 
   def install
     libexec.install Dir["*"]
+    chmod 0755, libexec/"bin/graphql-unused"
     bin.install_symlink libexec/"bin/graphql-unused"
   end
 
